@@ -186,7 +186,7 @@ The `MuntahaCache` class module provides a comprehensive caching solution for we
 import { muntahaCache } from "muntahaCache";
 
 // 1. Cache a JSON object with a custom TTL (Time to Live)
-await MuntahaCache.set(
+await muntahaCache.set(
   "myKey",
   "https://example.com/data",
   { myData: "value" },
@@ -194,27 +194,27 @@ await MuntahaCache.set(
 );
 
 // 2. Retrieve the cached JSON object
-const cachedData = await MuntahaCache.get(
+const cachedData = await muntahaCache.get(
   "myKey",
   "https://example.com/data",
   "local" // Optional: Specify "local" for localStorage or "session" for sessionStorage
 );
 
 // 3. Cache an image from a URL as a Blob
-await MuntahaCache.setMedia("imageKey", "https://example.com/image.png");
+await muntahaCache.setMedia("imageKey", "https://example.com/image.png");
 
 // 4. Retrieve the cached image Blob
-const cachedImageBlob = await MuntahaCache.getMedia("imageKey");
+const cachedImageBlob = await muntahaCache.getMedia("imageKey");
 
 // 5. Check if a specific cache key exists
-const isCached = await MuntahaCache.has("myKey", "https://example.com/data");
+const isCached = await muntahaCache.has("myKey", "https://example.com/data");
 
 // 6. Remove an item from the cache
-await MuntahaCache.remove("myKey", "https://example.com/data");
+await muntahaCache.remove("myKey", "https://example.com/data");
 
 // 7. Clear all cached items from local storage
-await MuntahaCache.clear("local");
+await muntahaCache.clear("local");
 
 // 8. Clear all cached items from session storage
-await MuntahaCache.clear("session");
+await muntahaCache.clear("session");
 ```

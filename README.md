@@ -185,24 +185,36 @@ The `SetupCache` class module provides a comprehensive caching solution for web 
 ```typescript
 import { StorageHub } from "./SetupCache";
 
-// Cache an item
+// 1. Cache a JSON object with a custom TTL (Time to Live)
 await StorageHub.set(
   "myKey",
   "https://example.com/data",
   { myData: "value" },
-  { ttl: 60000 }
+  { ttl: 60000 } // TTL in milliseconds (e.g., 60 seconds)
 );
 
-// Retrieve an item
+// 2. Retrieve the cached JSON object
 const cachedData = await StorageHub.get(
   "myKey",
   "https://example.com/data",
-  "local"
+  "local" // Optional: Specify "local" for localStorage or "session" for sessionStorage
 );
 
-// Cache an image
+// 3. Cache an image from a URL as a Blob
 await StorageHub.setMedia("imageKey", "https://example.com/image.png");
 
-// Retrieve a cached image
+// 4. Retrieve the cached image Blob
 const cachedImageBlob = await StorageHub.getMedia("imageKey");
+
+// 5. Check if a specific cache key exists
+const isCached = await StorageHub.has("myKey", "https://example.com/data");
+
+// 6. Remove an item from the cache
+await StorageHub.remove("myKey", "https://example.com/data");
+
+// 7. Clear all cached items from local storage
+await StorageHub.clear("local");
+
+// 8. Clear all cached items from session storage
+await StorageHub.clear("session");
 ```

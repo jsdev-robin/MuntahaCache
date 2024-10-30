@@ -183,10 +183,10 @@ The `MuntahaCache` class module provides a comprehensive caching solution for we
 ## Usage Example
 
 ```typescript
-import { StorageHub } from "./MuntahaCache";
+import { MuntahaCache } from "./MuntahaCache";
 
 // 1. Cache a JSON object with a custom TTL (Time to Live)
-await StorageHub.set(
+await MuntahaCache.set(
   "myKey",
   "https://example.com/data",
   { myData: "value" },
@@ -194,27 +194,27 @@ await StorageHub.set(
 );
 
 // 2. Retrieve the cached JSON object
-const cachedData = await StorageHub.get(
+const cachedData = await MuntahaCache.get(
   "myKey",
   "https://example.com/data",
   "local" // Optional: Specify "local" for localStorage or "session" for sessionStorage
 );
 
 // 3. Cache an image from a URL as a Blob
-await StorageHub.setMedia("imageKey", "https://example.com/image.png");
+await MuntahaCache.setMedia("imageKey", "https://example.com/image.png");
 
 // 4. Retrieve the cached image Blob
-const cachedImageBlob = await StorageHub.getMedia("imageKey");
+const cachedImageBlob = await MuntahaCache.getMedia("imageKey");
 
 // 5. Check if a specific cache key exists
-const isCached = await StorageHub.has("myKey", "https://example.com/data");
+const isCached = await MuntahaCache.has("myKey", "https://example.com/data");
 
 // 6. Remove an item from the cache
-await StorageHub.remove("myKey", "https://example.com/data");
+await MuntahaCache.remove("myKey", "https://example.com/data");
 
 // 7. Clear all cached items from local storage
-await StorageHub.clear("local");
+await MuntahaCache.clear("local");
 
 // 8. Clear all cached items from session storage
-await StorageHub.clear("session");
+await MuntahaCache.clear("session");
 ```

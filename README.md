@@ -1,6 +1,6 @@
-# SetupCache Module Documentation
+# MuntahaCache Module Documentation
 
-The `SetupCache` class module provides a comprehensive caching solution for web applications. This includes options for caching in various storage types (`local`, `session`, or `Cache Storage`) with automatic expiration, Least Recently Used (LRU) eviction strategies, and optional auto-caching based on access frequency.
+The `MuntahaCache` class module provides a comprehensive caching solution for web applications. This includes options for caching in various storage types (`local`, `session`, or `Cache Storage`) with automatic expiration, Least Recently Used (LRU) eviction strategies, and optional auto-caching based on access frequency.
 
 ---
 
@@ -14,7 +14,7 @@ The `SetupCache` class module provides a comprehensive caching solution for web 
   - [CACHE_NAME](#cache_name)
   - [DEFAULT_TTL](#default_ttl)
   - [MAX_CACHE_SIZE](#max_cache_size)
-- [SetupCache Class](#setupcache-class)
+- [MuntahaCache Class](#MuntahaCache-class)
   - [Properties](#properties)
   - [Methods](#methods)
     - [getLocal](#getlocal)
@@ -76,7 +76,7 @@ The `SetupCache` class module provides a comprehensive caching solution for web 
 - **Value**: `50`
 - **Description**: Maximum number of entries allowed in the cache.
 
-## SetupCache Class
+## MuntahaCache Class
 
 ### Properties
 
@@ -183,7 +183,7 @@ The `SetupCache` class module provides a comprehensive caching solution for web 
 ## Usage Example
 
 ```typescript
-import { StorageHub } from "./SetupCache";
+import { StorageHub } from "./MuntahaCache";
 
 // 1. Cache a JSON object with a custom TTL (Time to Live)
 await StorageHub.set(

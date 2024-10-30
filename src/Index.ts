@@ -12,7 +12,7 @@ interface CachedEntry<T> {
   accessedAt: number; // Last access timestamp for LRU strategy
 }
 
-const CACHE_NAME = "muntaha-shop-cache";
+const CACHE_NAME = "muntaha-cache";
 const DEFAULT_TTL = 300000; // 5 minutes
 const MAX_CACHE_SIZE = 50; // Max entries in cache
 
@@ -266,4 +266,4 @@ class SetupCache {
 }
 
 // Export an instance of SetupCache
-export const StorageHub = new SetupCache();
+export const MuntahaCache = new SetupCache();

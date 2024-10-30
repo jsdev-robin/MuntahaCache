@@ -183,7 +183,7 @@ The `MuntahaCache` class module provides a comprehensive caching solution for we
 ## Usage Example
 
 ```typescript
-import { MuntahaCache } from "muntahaCache";
+import { muntahaCache } from "muntahaCache";
 
 // 1. Cache a JSON object with a custom TTL (Time to Live)
 await MuntahaCache.set(

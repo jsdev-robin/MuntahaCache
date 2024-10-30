@@ -266,4 +266,4 @@ class SetupCache {
 }
 
 // Export an instance of SetupCache
-export const MuntahaCache = new SetupCache();
+export const muntahaCache = new SetupCache();

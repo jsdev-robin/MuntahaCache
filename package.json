@@ -1,16 +1,23 @@
 {
   "name": "muntahacache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "scripts": {
     "build": "rimraf dist && tsc",
     "prepublishOnly": "npm run build"
   },
+  "keywords": [
+    "cache",
+    "local-storage",
+    "session-storage",
+    "typescript",
+    "utility"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsdev-robin/MuntahaCache.git"

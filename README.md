@@ -61,7 +61,7 @@ The `MuntahaCache` class module provides a comprehensive caching solution for we
 ### `CACHE_NAME`
 
 - **Type**: `string`
-- **Value**: `"muntaha-shop-cache"`
+- **Value**: `"muntaha-cache"`
 - **Description**: Name of the cache storage used for storing entries.
 
 ### `DEFAULT_TTL`
